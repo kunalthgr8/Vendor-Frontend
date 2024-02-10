@@ -1,0 +1,218 @@
+:root {
+    --main-bg-color: #033b4a;
+    --accent-color: #2da95c;
+    --light-bg-color: #646060;
+    --button-hover-color: #10847e;
+    --text-color: #646060;
+    --border-color: white;
+  }
+  
+  .Contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-left: 10%;
+    flex-direction: column;
+    font-family: "Poppins";
+    gap: 30px;
+  }
+  
+  .Customer-Contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+    width: 70%;
+    border-radius: 20px;
+    border: 2px solid var(--main-bg-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .Title-Customer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--main-bg-color);
+  }
+  .Title-Customer h1 {
+    font-size: 48px;
+    font-weight: 800;
+  }
+  .Title-Customer h2 {
+    font-size: 23px;
+    font-weight: 600;
+  }
+  
+  .Contact-Support {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  .Vertical-Contact {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+  }
+  
+  .Individual-Contact {
+    margin: 5px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    gap: 15px;
+    color: #242429;
+    font-weight: 600;
+  }
+  
+  .Individual-Contact svg {
+    font-size: 30px;
+  }
+  
+  .Feedback-Contact {
+    width: 70%;
+    border-radius: 20px;
+    background-color: var(--main-bg-color);
+    border: 2px solid var(--accent-color);
+    padding: 15px;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  .Title-Feedback {
+    color: var(--accent-color);
+    font-size: 28px;
+    margin: 10px;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  
+  .Feedback-Contact textarea {
+    width: 100%;
+    border-radius: 20px;
+    height: 80px;
+    margin-bottom: 15px;
+    color: var(--main-bg-color);
+    font-family: cursive;
+    border: none;
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+  .Feedback-Contact textarea:focus {
+    outline: none;
+  }
+  
+  .Submit-Feedback {
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  .Submit-Feedback button {
+    background-color: var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--main-bg-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .Submit-Feedback button:hover {
+    transform: scale(1.1);
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .Customer-Contact,
+    .Feedback-Contact {
+      width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 882px) {
+    .Title-Customer h1 {
+      font-size: 40px;
+    }
+  
+    .Title-Customer h2 {
+      font-size: 20px;
+    }
+    .Individual-Contact {
+      font-size: 16px;
+    }
+    .Contact-Support {
+      width: 90%;
+      margin: 3%;
+      margin-top: 30px;
+    }
+  
+    .Individual-Contact svg {
+      font-size: 26px;
+    }
+    .Submit-Feedback button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media screen and (max-width: 692px) {
+    .Customer-Contact {
+      width: 90%;
+    }
+    .Contact {
+      padding-left: 0px;
+      align-items: center;
+    }
+    .Title-Customer h1 {
+      font-size: 35px;
+    }
+    .Title-Customer h2 {
+      font-size: 16px;
+    }
+    .Individual-Contact {
+      font-size: 16px;
+    }
+    .Individual-Contact svg {
+      font-size: 20px;
+    }
+    .Feedback-Contact textarea {
+      height: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 512px) {
+    .Customer-Contact,
+    .Feedback-Contact {
+      width: 95%;
+    }
+    .Contact {
+      padding-left: auto;
+      align-items: center;
+    }
+    .Title-Customer h1 {
+      font-size: 35px;
+    }
+    .Title-Customer h2 {
+      font-size: 16px;
+    }
+    .Individual-Contact {
+      font-size: 14px;
+      gap: 5px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+  
+    .Individual-Contact svg {
+      font-size: 20px;
+    }
+  }
+  

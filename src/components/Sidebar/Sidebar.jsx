@@ -4,13 +4,14 @@ import { IoHome } from "react-icons/io5";
 import { AiFillMedicineBox } from "react-icons/ai";
 import { FaCartShopping } from "react-icons/fa6";
 import { TbDiscount2 } from "react-icons/tb";
+import { MdOutlineNoteAdd } from "react-icons/md";
+import { FaHistory } from "react-icons/fa";
 import { IoMdContacts } from "react-icons/io";
 import { FiLogOut } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
 const SideBar = () => {
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -22,57 +23,39 @@ const SideBar = () => {
     };
   }, []);
 
+  const renderNavLinks = () => {
+    const navLinks = [
+      { to: "/", text: "Home", icon: <IoHome /> },
+      { to: "/productpage", text: "Products", icon: <AiFillMedicineBox /> },
+      { to: "/addproduct", text: "Add Product", icon: <FaCartShopping /> },
+      { to: "/orderhistory", text: "Order History", icon: <FaCartShopping /> },
+      { to: "/contact", text: "Contact Us", icon: <IoMdContacts /> },
+    ];
+
+    return navLinks.map((link, index) => (
+      <NavLink
+        key={index}
+        to={link.to}
+        activeClassName="Items-Active"
+        className={`Items-SideBars`}
+      >
+        {link.text}
+      </NavLink>
+    ));
+  };
+
   return windowWidth >= 1300 || windowWidth <= 761 ? (
     <div className="SideBar sidebar bg-sidebar-color text-white md:h-screen  md:fixed md:top-0 left-0 p-4">
       <div className="Logo-SideBar">
-        <Link to="/">
+        <NavLink to="/">
           <img src={Logo} alt="Logo" className="Image-SideBar" />
-        </Link>
+        </NavLink>
       </div>
       <div className="Title-SideBar">
         <h2 className="Heading-Sidebar">Aoushadhi</h2>
       </div>
       <div className="Items-SideBar">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            ` ${isActive ? "Items-Active" : ""} Items-SideBars`
-          }
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/productpage"
-          className={({ isActive }) =>
-            ` ${isActive ? "Items-Active" : ""} Items-SideBars`
-          }
-        >
-          Products
-        </NavLink>
-        <NavLink
-          to="/addproduct"
-          className={({ isActive }) =>
-            ` ${isActive ? "Items-Active" : ""} Items-SideBars`
-          }
-        >
-          Add Product
-        </NavLink>
-        <NavLink
-          to="/orderhistory"
-          className={({ isActive }) =>
-            ` ${isActive ? "Items-Active" : ""} Items-SideBars`
-          }
-        >
-          Order History
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className={({ isActive }) =>
-            ` ${isActive ? "Items-Active" : ""} Items-SideBars`
-          }
-        >
-          Contact Us
-        </NavLink>
+        {renderNavLinks()}
         <span className="User-SideBar">Log Out</span>
       </div>
       <div className="Footer-SideBar">
@@ -98,7 +81,7 @@ const SideBar = () => {
           <IoHome />
         </NavLink>
         <NavLink
-          to="/"
+          to="/productpage"
           className={({ isActive }) =>
             ` ${isActive ? "Items-Active" : ""} logo-SideBars`
           }
@@ -106,21 +89,21 @@ const SideBar = () => {
           <AiFillMedicineBox />
         </NavLink>
         <NavLink
-          to="/cart"
+          to="/addproduct"
           className={({ isActive }) =>
             ` ${isActive ? "Items-Active" : ""} logo-SideBars`
           }
         >
-          <FaCartShopping />
+          <MdOutlineNoteAdd />
         </NavLink>
 
         <NavLink
-          to="/offers"
+          to="/orderhistory"
           className={({ isActive }) =>
             ` ${isActive ? "Items-Active" : ""} logo-SideBars`
           }
         >
-          <TbDiscount2 />
+          <FaHistory />
         </NavLink>
         <NavLink
           to="/contact"
