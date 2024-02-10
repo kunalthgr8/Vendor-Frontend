@@ -1,0 +1,160 @@
+/* Sidebar */
+.SideBar {
+    display: flex;
+    flex-direction: column;
+    background-color: #033B4A;
+    justify-content: space-between;
+    padding-top: 35px;
+    font-family: "Poppins";
+    width: 20%;
+    border-right: 3px solid #2da95c;
+  }
+  
+  /* Common styles for Logo and Image in Sidebar */
+  .Logo-SideBar {
+    padding-left: 20%;
+  }
+  
+  .Image-SideBar {
+    width: 120px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .Image-SideBar:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Title in Sidebar */
+  .Title-SideBar {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .Heading-Sidebar {
+    color: #2da95c;
+    text-shadow: 0 0 3px #000000, 0 0 2px #000000;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  /* Sidebar Items */
+  .Items-SideBar {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+    gap: 10px;
+  }
+  
+  .Items-SideBars {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px;
+    cursor: pointer;
+    color: white;
+  }
+  .Items-Active {
+    color: #9dabaf;
+  }
+  .Items-SideBars:hover {
+    color: #9dabaf;
+    font-weight: 700;
+  }
+  
+  .User-SideBar {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px;
+    cursor: pointer;
+    color: red;
+  }
+  
+  .User-SideBar:hover {
+    color: green;
+    font-weight: 700;
+  }
+  
+  /* Sidebar Footer */
+  .Footer-SideBar {
+    border-top: 2px solid #2da95c;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .Footer-SideBar p {
+    font-size: 14px;
+    padding: 5px;
+    font-weight: 550;
+  }
+  
+  .Logo-Sidebar {
+    width: 10%;
+  }
+  
+  .img-small {
+    width: 100%;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .img-small:hover {
+    transform: scale(1.1);
+  }
+  
+  .detail-Logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 7px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .logo-SideBars:hover {
+    color: #9dabaf;
+    font-weight: 700;
+  }
+  
+  .logout-Logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 7px;
+    cursor: pointer;
+    color: red;
+    margin-bottom: 20px;
+  }
+  
+  @media only screen and (max-width: 761px) {
+    .SideBar {
+      width: 100%;
+      position: fixed;
+    }
+    .Logo-Sidebar {
+      width: 100%;
+    }
+  }
+  
