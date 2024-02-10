@@ -1,6 +1,5 @@
-
 import './App.css'
-
+import {AddProduct,Contact,Home,LoginSignup,Order,Products,Sidebar,Topbar,Update,User} from "./components/index"
 function App() {
 
   return (
