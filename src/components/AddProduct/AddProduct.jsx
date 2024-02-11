@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AddProduct.css";
 import { NavLink } from "react-router-dom";
 
@@ -7,8 +7,8 @@ function AddProduct() {
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
   const [brand, setBrand] = useState("");
-  const [manufacturingDate, setManufacturingDate] = useState();
-  const [expiryDate, setExpiryDate] = useState();
+  const [manufacturingDate, setManufacturingDate] = useState(new Date());
+  const [expiryDate, setExpiryDate] = useState(new Date());
   const [type, setType] = useState("");
   const [countryOfOrigin, setCountryOfOrigin] = useState("");
   const [basePrice, setBasePrice] = useState();
@@ -17,6 +17,11 @@ function AddProduct() {
   const [itemWeight, setItemWeight] = useState("");
   const [quantity, setQuantity] = useState("");
 
+  useEffect(() => {
+    if (manufacturingDate > expiryDate) {
+      setExpiryDate(manufacturingDate);
+    }
+  }, [manufacturingDate, expiryDate]);
   function handleChange(e) {
     setFile(URL.createObjectURL(e.target.files[0]));
   }
@@ -85,6 +90,7 @@ function AddProduct() {
                     <div className="container">
                       {" "}
                       <input
+                        type="date"
                         className="namefield"
                         value={manufacturingDate}
                         onChange={(e) => setManufacturingDate(e.target.value)}
@@ -97,6 +103,7 @@ function AddProduct() {
                       {" "}
                       <input
                         className="namefield"
+                        type="date"
                         value={expiryDate}
                         onChange={(e) => setExpiryDate(e.target.value)}
                       />{" "}
