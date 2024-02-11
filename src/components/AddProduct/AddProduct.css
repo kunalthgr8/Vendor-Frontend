@@ -1,0 +1,68 @@
+:root {
+  --main-bg-color: #033b4a;
+  --accent-color: #2da95c;
+  --light-bg-color: #646060;
+  --button-hover-color: #10847e;
+  --text-color: #646060;
+  --border-color: white;
+}
+.add {
+  color: #646060;
+  font-size: xx-large;
+}
+.geninfo {
+  color: #033b4a;
+  font-size: x-large;
+  margin-top: 20px;
+}
+.box1 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px 30px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.area {
+  display: flex;
+  flex-direction: column;
+  color: #646060;
+  gap: 10px;
+}
+.name,
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.namefield {
+  background-color: lightgray;
+  border-radius: 7px;
+  border: 1.5px solid #033b4a;
+  color: #033b4a;
+  padding: 7px 20px;
+  margin-top: 7px;
+  resize: none;
+  font-size: larger;
+}
+.button-below {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+.button-below button {
+  font-size: 16px;
+}
+.but {
+  background-color: #033b4a;
+  padding: 10px 50px;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+  margin: 10px;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
