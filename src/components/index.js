@@ -3,7 +3,7 @@ import Contact from "./Contact/Contact";
 import Home from "./Home/Home";
 import LoginSignup from "./LoginSignup/LoginSignup";
 import Order from "./Order/Order";
-import Products from "./Products/Products";
+import Products from "./Products/Medicine";
 import Sidebar from "./Sidebar/Sidebar";
 import Topbar from "./Topbar/Topbar";
 import Update from "./Update/Update";

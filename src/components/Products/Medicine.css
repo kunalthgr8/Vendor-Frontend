@@ -1,0 +1,20 @@
+.product-page{
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.heading-product{
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #737777;
+    margin: 10px;
+    margin-bottom: 18px;
+    margin-top: 30px;
+}
+
+.product-cards{
+    margin: 10px;
+    margin-top: 50px;
+    width: 85%;
+}
