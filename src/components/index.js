@@ -8,9 +8,16 @@ import Sidebar from "./Sidebar/Sidebar";
 import Topbar from "./Topbar/Topbar";
 import Update from "./Update/Update";
 import User from "./User/User";
-
+import Register from "./LoginSignup/Register/Register";
+import TotalDetail from "./Home/TotalDetail/TotalDetail";
+import InfoTickets from "./Home/InfoTicket/InfoTickets";
+import Table from "./Home/Table/Table";
 export {
+  Table,
+  InfoTickets,
+  TotalDetail,
   AddProduct,
+  Register,
   Contact,
   Home,
   LoginSignup,

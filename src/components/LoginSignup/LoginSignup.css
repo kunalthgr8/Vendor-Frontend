@@ -1,0 +1,244 @@
+:root {
+    --main-bg-color: #033b4a;
+    --accent-color: #2da95c;
+    --light-bg-color: #646060;
+    --button-hover-color: #10847e;
+    --text-color: #646060;
+    --border-color: white;
+  }
+  
+  .Container-Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    padding: 25px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    margin-top: 120px;
+    font-family: "Poppins";
+    margin-left: 20%;
+    width: 60%;
+  }
+  
+  .Logo-Login,
+  .Image-Login,
+  .Authentication-Login {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Image-Login {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease-in-out;
+  }
+  .Image-Login:hover {
+    transform: scale(1.1);
+  }
+  
+  .Heading-Login {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .Heading-Login h1 {
+    font-size: 45px;
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  .Form-Login {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    cursor: pointer;
+    border-left: 2px solid white;
+  }
+  .Input-Login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .Input-Login input {
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    color: var(--text-color);
+    background-color: #eeeeee;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 90%;
+  }
+  @media screen and (max-width: 1280px) {
+    .Container-Login {
+      flex-wrap: wrap;
+      height: 100%;
+      margin-bottom: 20px;
+    }
+    .Logo-Login {
+      width: 65%;
+    }
+    .Form-Login {
+      border-left: 0px solid transparent;
+      border-top: 2px solid white;
+      width: 70%;
+      height: 50%;
+    }
+  }
+  @media screen and (max-width: 945px) {
+    .Container-Login {
+      width: 70%;
+      margin-left: 15%;
+    }
+    .Form-Login {
+      border-left: 0px solid transparent;
+      border-top: 2px solid white;
+      width: 80%;
+      height: 50%;
+    }
+    .Authentication-Login{
+      width: 75%;
+    }
+  }
+  @media screen and (max-width: 761px) {
+    .Container-Login {
+      width: 80%;
+      margin-left: 10%;
+    }
+    .Form-Login {
+      border-left: 0px solid transparent;
+      border-top: 2px solid white;
+      width: 90%;
+      height: 50%;
+    }
+    .Authentication-Login{
+      width: 75%;
+    }
+  }
+  
+  
+  
+  .Para-Login {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .Para-Login p {
+    color: #c2d1d6;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.5s;
+  }
+  
+  .Para-Login p:hover {
+    color: var(--button-hover-color);
+  }
+  
+  .Button-Login {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .Input-Login button {
+    color: white;
+    font-weight: 600;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 5px;
+    background-color: #10847e;
+    font-size: 14px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .Input-Login button:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
+    /* font-size: 16px; */
+  }
+  
+  .Dark {
+    background-color: #10847e;
+  }
+  
+  .Light {
+    background-color: var(--light-bg-color);
+  }
+  
+  .Form-Login hr {
+    border-bottom: 1.5px solid white;
+    width: 80%;
+    align-items: center;
+    margin-left: 5%;
+    opacity: 50%;
+    margin: 10px;
+  }
+  
+  .Authentication-Login button {
+    padding: 10px 25px;
+    background-color: white;
+    border-radius: 20px;
+    color: var(--main-bg-color);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 570px) {
+    .Container-Login {
+      width: 90%;
+      margin-left: 5%;
+    }
+    .Form-Login {
+      border-left: 0px solid transparent;
+      border-top: 2px solid white;
+      width: 95%;
+      height: 50%;
+    }
+    .Input-Login input{
+      padding-left: 10px;
+      width: 100%;
+      /* font-size: 15px; */
+    }
+    .Input-Login button{
+      width: 100%;
+    }
+    .Authentication-Login{
+      width: 75%;
+    }
+  }
+  
+  @media screen and (max-width: 460px) {
+    
+    .Input-Login input{
+      font-size: 15px;
+      /* padding-left: 0px; */
+      margin-left: 0px;
+    }
+    .Input-Login button{
+      margin-left: 0px
+    }
+    .Para-Login p {
+      font-size: 12px;
+    }
+    .Authentication-Login{
+      width: 75%;
+    }
+  }

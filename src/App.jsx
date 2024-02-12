@@ -3,6 +3,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import {
   AddProduct,
   Contact,
+  Register,
   Home,
   LoginSignup,
   Order,
@@ -53,9 +54,10 @@ function App() {
       ) : (
         <Routes>
           <Route path="login" element={<LoginSignup />} />
+          <Route path="/registershop" element={<Register />} />
 
           {/* Add a default route for unmatched paths */}
-          <Route path="*" element={<Login />} />
+          <Route path="*" element={<LoginSignup />} />
         </Routes>
       )}
     </div>
