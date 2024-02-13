@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./AddProduct.css";
 import { NavLink } from "react-router-dom";
 
-function AddProduct() {
+function AddProduct({ userId, productId }) {
   const [File, setFile] = useState("");
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
@@ -47,13 +47,13 @@ function AddProduct() {
       <div className=" w-full mt-5">
         <p className="add">Add a new product</p>
       </div>
-      <div className="flex mt-10 gap-10">
+      <div className="flex flex-col md:flex-row mt-10 gap-10">
         <div className="flex flex-col w-4/7">
           <div className="box1">
             <div className="geninfo">General Information</div>
             <div className="area">
               <div className="name">
-                <label className="mt-5 text-l">Product Name</label>
+                <label className="mt-5 text-xl">Product Name</label>
                 <input
                   className="namefield"
                   value={productName}
@@ -61,7 +61,7 @@ function AddProduct() {
                 />
               </div>
               <div className="description">
-                <label className="mt-5 text-l">Product Description</label>
+                <label className="mt-5 text-xl">Product Description</label>
                 <textarea
                   rows={4}
                   className="namefield"
@@ -76,7 +76,7 @@ function AddProduct() {
 
             <div className="area">
               <div className="name">
-                <label className="mt-5 text-l">Brand</label>
+                <label className="mt-5 text-xl">Brand</label>
                 <input
                   className="namefield"
                   value={brand}
@@ -86,7 +86,7 @@ function AddProduct() {
               <div className="description">
                 <div className="flex flex-row">
                   <div className="flex flex-col m-2">
-                    <label className="mt-5 text-l">Manufacturing Date</label>
+                    <label className="mt-5 text-xl">Manufacturing Date</label>
                     <div className="container">
                       {" "}
                       <input
@@ -98,7 +98,7 @@ function AddProduct() {
                     </div>
                   </div>
                   <div className="flex flex-col m-2">
-                    <label className="mt-5 text-l">Expiry Date</label>
+                    <label className="mt-5 text-xl">Expiry Date</label>
                     <div className="container">
                       {" "}
                       <input
@@ -112,7 +112,7 @@ function AddProduct() {
                 </div>
                 <div className="flex flex-row">
                   <div className="flex flex-col m-2">
-                    <label className="mt-5 text-l">Type</label>
+                    <label className="mt-5 text-xl">Type</label>
                     <div className="container">
                       {" "}
                       <input
@@ -123,7 +123,7 @@ function AddProduct() {
                     </div>
                   </div>
                   <div className="flex flex-col m-2">
-                    <label className="mt-5 text-l">Country of Origin</label>
+                    <label className="mt-5 text-xl">Country of Origin</label>
                     <div className="container">
                       {" "}
                       <input
@@ -143,7 +143,7 @@ function AddProduct() {
             <div className="geninfo">Pricing Information</div>
             <div className="area">
               <div className="name">
-                <label className="mt-5 text-l">Base Price</label>
+                <label className="mt-5 text-xl">Base Price</label>
                 <input
                   className="namefield"
                   value={basePrice}
@@ -151,7 +151,7 @@ function AddProduct() {
                 />
               </div>
               <div className="description">
-                <label className="mt-5 text-l">Discount</label>
+                <label className="mt-5 text-xl">Discount</label>
                 <input
                   rows={4}
                   className="namefield"
@@ -166,7 +166,7 @@ function AddProduct() {
 
             <div className="area">
               <div className="description">
-                <label className="mt-5 text-l">Item Dimention</label>
+                <label className="mt-5 text-xl">Item Dimention</label>
                 <div className="container">
                   {" "}
                   <input
@@ -175,7 +175,7 @@ function AddProduct() {
                     onChange={(e) => setItemDimension(e.target.value)}
                   />{" "}
                 </div>
-                <label className="mt-5 text-l">Item Weight</label>
+                <label className="mt-5 text-xl">Item Weight</label>
                 <div className="container">
                   {" "}
                   <input
@@ -185,7 +185,7 @@ function AddProduct() {
                   />{" "}
                 </div>
 
-                <label className="mt-5 text-l">Quantity</label>
+                <label className="mt-5 text-xl">Quantity</label>
                 <div className="container">
                   {" "}
                   <input
@@ -194,7 +194,7 @@ function AddProduct() {
                     onChange={(e) => setQuantity(e.target.value)}
                   />{" "}
                 </div>
-                <label className="mt-5 text-l">Image</label>
+                <label className="mt-5 text-xl">Image</label>
                 <div className="container">
                   {" "}
                   <input
@@ -214,6 +214,7 @@ function AddProduct() {
             Proceed
           </button>
         </NavLink>
+        {productId && <button className="but">Update</button>}
         <button className="but">Back</button>
       </div>
     </div>
