@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #033b4a;
+  --button-bg-hover: #10847e;
+  --button-color-hover: white;
+}
+
+.UserU {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins";
+}
+
+.User-BoxU {
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+}
+
+.Image-UserU {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Image-UserU img {
+  width: 150px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+.Image-UserU img:hover {
+  transform: scale(1.1);
+}
+
+.Details-UserU {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  letter-spacing: 0.5px;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.Detail-DivU {
+  display: flex;
+  width: 80%;
+  color: #033b4a;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: space-between;
+}
+
+.Name-UserU,
+.Id-UserU {
+  width: 40%;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #033b4a;
+}
+
+.Detail-UserU {
+  display: flex;
+  width: 80%;
+  color: #033b4a;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  margin-top: 15px;
+  border-bottom: 3px solid #033b4a;
+}
+
+.Button-User {
+  display: flex;
+  width: 90%;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Button-User button {
+  background-color: #2da95c;
+  color: #033b4a;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 20px;
+  border: 2px solid #033b4a;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.Button-User button:hover {
+  background-color: #10847e;
+  color: white;
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 1125px) {
+  .User-BoxU {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 754px) {
+  .Name-UserU,
+  .Id-UserU,
+  .Detail-UserU {
+    font-size: 16px;
+  }
+  .Button-User button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .User-BoxU {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 581px) {
+  .Button-User {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .Button-User button {
+    width: 90%;
+  }
+  .User-BoxU {
+    width: 85%;
+  }
+  .Image-UserU img {
+    width: 130px;
+  }
+}
