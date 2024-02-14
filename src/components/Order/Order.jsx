@@ -1,8 +1,12 @@
 import React from 'react'
+import {Table} from "../index.js"
+import "./Order.css"
 
 function Order() {
   return (
-    <div>Order</div>
+    <div className='order-table'>
+    <Table width='90%'/>
+    </div>
   )
 }
 

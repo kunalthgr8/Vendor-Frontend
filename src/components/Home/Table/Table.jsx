@@ -1,9 +1,9 @@
 import React from "react";
 import "./Table.css";
 
-function Table() {
+function Table({width = ""}) {
   return (
-    <table className="styled-table">
+    <table className="styled-table" style={{ width: `${width}` }}>
       <thead>
         <tr>
           <th>Product</th>
