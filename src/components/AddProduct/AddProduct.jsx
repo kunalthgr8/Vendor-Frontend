@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./AddProduct.css";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
-function AddProduct({ userId, productId }) {
+const userId = "1234";
+function AddProduct({ productId }) {
   const [File, setFile] = useState("");
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
@@ -25,23 +27,88 @@ function AddProduct({ userId, productId }) {
   function handleChange(e) {
     setFile(URL.createObjectURL(e.target.files[0]));
   }
-  function Proceed() {
-    console.log(
-      File,
-      productName,
-      productDescription,
-      brand,
-      manufacturingDate,
-      expiryDate,
-      type,
-      countryOfOrigin,
-      basePrice,
-      discount,
-      itemDimension,
-      itemWeight,
-      quantity
-    );
-  }
+
+  const sendProduct = async () => {
+    try {
+      const Data = {
+        userId: userId,
+        product_name: productName,
+        description: productDescription,
+        brand: brand,
+        manufacturing_date: manufacturingDate,
+        expiry_date: expiryDate,
+        type: type,
+        countryOfOrigin: countryOfOrigin,
+        price: basePrice,
+        discount: discount,
+        itemDimension: itemDimension,
+        itemWeight: itemWeight,
+        quantity: quantity,
+        images: File,
+      };
+      console.log(Data)
+      // Simulate an asynchronous operation (replace with your actual API call)
+      axios.post("http://localhost:4000/product_data_post", Data);
+
+      // After the asynchronous operation, you can proceed with further actions
+      console.log('Data sent successfully:', Data);
+    } catch (error) {
+      console.error('Error sending data:', error);
+      // Handle errors appropriately
+    }
+  };
+
+
+  const send_product_info_to_update = async () => {
+    // const data = {
+    //   productId:productId
+    // }
+
+    axios
+      .get("http://localhost:4000/product_data_get", {
+        params: { productId: productId },
+      })
+      .then((response) => {
+        const res = response.data;
+        const data = res[0]
+        const responseData = {
+          vendorId: data.vendorId,
+          productId: data.productId,
+          product_name: data.product_name,
+          price: data.price,
+          brand: data.brand,
+          manufacturing_date: data.manufacturing_date,
+          expiry_date: data.expiry_date,
+          type: data.type,
+          discount: data.discount
+
+        };
+        // console.log(productId)
+        // return ""
+        axios.post("http://localhost:4000/product_data_update", responseData);
+        return "";
+      });
+    // const data = {"userId":response.data.}
+    // await axios.post('http://localhost:4000/cart_data_post',response.data);
+  };
+
+  // function Proceed() {
+  //   console.log(
+  //     File,
+  //     productName,
+  //     productDescription,
+  //     brand,
+  //     manufacturingDate,
+  //     expiryDate,
+  //     type,
+  //     countryOfOrigin,
+  //     basePrice,
+  //     discount,
+  //     itemDimension,
+  //     itemWeight,
+  //     quantity
+  //   );
+  // }
   return (
     <div className=" flex flex-col">
       <div className=" w-full mt-5">
@@ -210,7 +277,7 @@ function AddProduct({ userId, productId }) {
       </div>
       <div className="button-below">
         <NavLink to="/payment">
-          <button className="but" onClick={Proceed}>
+          <button className="but" onClick={sendProduct}>
             Proceed
           </button>
         </NavLink>
